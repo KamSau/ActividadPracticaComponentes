@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Anthologies</title>
+</head>
+<body>
+	<div>
+		<div>
+			<h4><span th:text="${ant.name}">Name</span></h4>
+			<h5><span th:text="${ant.date}">Date</span></h5>
+			<p th:text="${ant.description}">Description</p>
+		</div>
+		<ul>
+		<h5>Articles:</h5>
+		<div th:each="entry : ${ant.articles}">
+			<li>
+				<h6><span th:text="${entry.name}">Name</span></h6>
+			</li>
+		</div>
+		</ul>
+	</div>
+</body>
+</html>
